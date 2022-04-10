@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+	<meta charset="UTF-8" />
+	<title>Café da manhã MV</title>
+
+	<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+</style>
+
+</h:head>
+
+<h:body style="background-color: #ADB7B8; width: 100%;">
+
+	<div class="header"
+		style="background: #6AB2C5; font-family: Helvetica; position: relative; width: 100%; height: 80px;">
+
+		<div class="menu-lateral" style="display: inline;">
+
+			<p:sidebar widgetVar="MenuLateral" style="opacity: 0.94;">
+
+				<h4>Menu</h4>
+
+				<h:panelGrid columns="1" style="width: 100%;">
+
+					<p:linkButton type="button" value="Cadastro"
+						styleClass="ui-button-flat" style="width: 100%; text-align: left; text-decoration: none" outcome="cadastro" />
+
+					<p:linkButton type="button" value="Editar"
+						styleClass="ui-button-flat" style="width: 100%; text-align: left"
+						 outcome="editar" />
+
+				</h:panelGrid>
+
+			</p:sidebar>
+
+			<!-- botão bar navegation -->
+			<p:commandButton icon="pi pi-bars" onclick="PF('MenuLateral').show()"
+				styleClass="ui-button-secondary ui-button-flat"
+				style="font-size: 1.9rem; width:4%;height: 100%; color: white;" />
+		</div>
+
+		<h1 style="color: white; margin: 15px 15px 15px 0px; display: inline;">Café
+			da Manhã MV</h1>
+
+	</div>
+
+	<br />
+
+	<div style="width: 1000px; height: 800px; align: center; margin: auto;">
+
+
+		<p:panel header="Lista de Participantes">
+
+			<div>
+
+				<p:accordionPanel id="listaColab" multiple="true" activeIndex="" var="c" value="#{lista.colabs}">
+					<p:tab title="#{c.nome}">
+					
+						<p:dataTable var="i" value="#{c.itens}" >
+						
+							<p:column headerText="Itens">
+								<h:outputText value="#{i.nome}"/>
+							</p:column>
+						
+						</p:dataTable>
+					
+					</p:tab>
+				</p:accordionPanel>
+
+			</div>
+
+		</p:panel>
+
+	</div>
+
+
+
+</h:body>
+
+</html>
