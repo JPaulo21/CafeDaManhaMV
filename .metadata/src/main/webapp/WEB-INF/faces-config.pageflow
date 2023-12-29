@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16440761650010" configfile="/com.mv.cafedamanha/src/main/webapp/WEB-INF/faces-config.xml">
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16440761650010" configfile="/CafeDaManha/src/main/webapp/WEB-INF/faces-config.xml">
   <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="562" id="pf16480054322380" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16480054322381 pf16493075547832 pf16494681060430" path="/*"/>
   <nodes xsi:type="pageflow:PFPage" name="pags/cadastro" x="300" y="372" id="pf16480054322392" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16480054322381" path="/pags/cadastro"/>
   <nodes xsi:type="pageflow:PFPage" name="pags/lista" x="338" y="562" id="pf16493075547843" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf16493075547832" path="/pags/lista"/>
   <nodes xsi:type="pageflow:PFPage" name="pags/editar" x="267" y="732" id="pf16494681060431" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" inlinks="pf16494681060430" path="/pags/editar"/>
-  <links id="pf16480054322381" target="pf16480054322392" source="pf16480054322380" outcome="cadastro" redirect="true"/>
-  <links id="pf16493075547832" target="pf16493075547843" source="pf16480054322380" outcome="lista" redirect="true"/>
-  <links id="pf16494681060430" target="pf16494681060431" source="pf16480054322380" outcome="editar" redirect="true"/>
+  <links id="pf16480054322381" target="pf16480054322392" source="pf16480054322380"/>
+  <links id="pf16493075547832" target="pf16493075547843" source="pf16480054322380"/>
+  <links id="pf16494681060430" target="pf16494681060431" source="pf16480054322380"/>
 </pageflow:Pageflow>
